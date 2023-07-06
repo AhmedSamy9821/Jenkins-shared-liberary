@@ -1,15 +1,5 @@
 @Library('pipeline-library-demo')_
-pipeline {
-  agent any
-
-  stages {
-    stage('Say Hello') {
-      steps {
-        script {
-          def sayHello = load 'sayHello.groovy'
-          sayHello.call('Jenkins')
-        }
-      }
-    }
-  }
-}
+ stage('Demo') {
+     echo 'Hello world'
+     sayHello 'Ahmed'
+ }
